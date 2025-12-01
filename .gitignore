@@ -1,0 +1,10 @@
+# System files
+.DS_Store
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Project specific
+build/
+node_modules/

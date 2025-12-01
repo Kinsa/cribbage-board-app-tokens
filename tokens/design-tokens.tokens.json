@@ -1,0 +1,318 @@
+{
+  "light": {
+    "surface": {
+      "player 1": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.green.400}"
+      },
+      "player 2": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.blue.400}"
+      },
+      "inverted primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.100}"
+      },
+      "canvas": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.150}"
+      },
+      "secondary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.400}"
+      },
+      "primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.900}"
+      }
+    },
+    "text": {
+      "player 2": {
+        "accent": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.500}"
+        },
+        "high-contrast": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.500}"
+        },
+        "primary": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.400}"
+        }
+      },
+      "player 1": {
+        "accent": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.500}"
+        },
+        "high-contrast": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.500}"
+        },
+        "primary": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.400}"
+        }
+      },
+      "secondary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.400}"
+      },
+      "primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.900}"
+      },
+      "inverted primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.100}"
+      }
+    },
+    "button": {
+      "player 1": {
+        "background focus": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.500}"
+        },
+        "text": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.grey.100}"
+        },
+        "background": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.400}"
+        }
+      },
+      "player 2": {
+        "focus": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.500}"
+        },
+        "text": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.grey.100}"
+        },
+        "background": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.400}"
+        }
+      }
+    }
+  },
+  "dark": {
+    "surface": {
+      "player 1": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.green.300}"
+      },
+      "player 2": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.blue.200}"
+      },
+      "inverted primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.900}"
+      },
+      "canvas": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.800}"
+      },
+      "secondary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.150}"
+      },
+      "primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.100}"
+      }
+    },
+    "text": {
+      "player 2": {
+        "accent": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.100}"
+        },
+        "high-contrast": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.100}"
+        },
+        "primary": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.200}"
+        }
+      },
+      "player 1": {
+        "accent": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.200}"
+        },
+        "high-contrast": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.200}"
+        },
+        "primary": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.300}"
+        }
+      },
+      "secondary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.150}"
+      },
+      "primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.100}"
+      },
+      "inverted primary": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.900}"
+      }
+    },
+    "button": {
+      "player 1": {
+        "background focus": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.400}"
+        },
+        "text": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.grey.100}"
+        },
+        "background": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.green.300}"
+        }
+      },
+      "player 2": {
+        "focus": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.300}"
+        },
+        "text": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.grey.100}"
+        },
+        "background": {
+          "$description": "",
+          "$type": "color",
+          "$value": "{primitives.color.blue.200}"
+        }
+      }
+    }
+  },
+  "primitives": {
+    "color": {
+      "blue": {
+        "100": {
+          "$type": "color",
+          "$value": "#a7e0fbff"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#66b9e5ff"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#3587d8ff"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#0073e6ff"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#0059b2ff"
+        }
+      },
+      "green": {
+        "200": {
+          "$type": "color",
+          "$value": "#c8f66dff"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#89ce00ff"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#4c9d00ff"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#316600ff"
+        }
+      },
+      "grey": {
+        "100": {
+          "$type": "color",
+          "$value": "#faf8f8ff"
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#f3f4f6ff"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#b9b9ceff"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#9a9aabff"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#6f6f7bff"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "#2b2e32ff"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#1a1a1aff"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "cribbage-board-app-tokens",
+  "version": "1.0.0",
+  "description": "Design tokens for Cribbage Board App",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "build",
+    "properties"
+  ],
+  "scripts": {
+    "build": "node_modules/.bin/style-dictionary build",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kinsa Creative Incorporated",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "style-dictionary": "^5.1.1"
+  }
+}

@@ -1,0 +1,6 @@
+[tools]
+node = "22.21.1"
+
+[tasks.build]
+run = "node_modules/.bin/style-dictionary build"
+description = "Build styles"
