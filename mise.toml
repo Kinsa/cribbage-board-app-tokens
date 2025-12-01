@@ -1,5 +1,5 @@
 [tools]
-node = "22.21.1"
+node = "lts"
 
 [tasks.build]
 run = "node_modules/.bin/style-dictionary build"

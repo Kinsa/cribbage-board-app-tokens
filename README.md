@@ -15,6 +15,7 @@ After running `npm run build`, the following files are generated:
 
 - **CSS**: `build/css/_variables.css` - CSS custom properties for web applications
 - **JavaScript**: `build/js/variables.js` - ES6 module for JavaScript/TypeScript projects
+- **Tailwind**: `build/tailwind/colors.js` - Color tokens formatted for Tailwind CSS configuration
 
 ## Installation as a Dependency
 
@@ -30,6 +31,17 @@ Then import the tokens in your project:
 ```
 // JavaScript
 import tokens from '@kinsa/cribbage-board-app-tokens';
+
+// Tailwind (in your tailwind.config.js)
+const { colors } = require('@kinsa/cribbage-board-app-tokens/build/tailwind/variables.js');
+
+module.exports = {
+  theme: {
+    extend: {
+      colors,
+    },
+  },
+};
 
 /* CSS */
 @import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';

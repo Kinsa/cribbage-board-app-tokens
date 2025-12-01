@@ -1,8 +1,8 @@
 {
-  "name": "cribbage-board-app-tokens",
+  "name": "@kinsa/cribbage-board-app-tokens",
   "version": "1.0.0",
   "description": "Design tokens for Cribbage Board App",
-  "main": "build/index.js",
+  "main": "build/js/variables.js",
   "type": "module",
   "files": [
     "build",

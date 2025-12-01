@@ -22,6 +22,16 @@
                     "format": "javascript/es6"
                 }
             ]
+        },
+        "tailwind": {
+            "transformGroup": "js",
+            "buildPath": "build/tailwind/",
+            "files": [
+                {
+                    "destination": "variables.js",
+                    "format": "javascript/es6"
+                }
+            ]
         }
     }
 }
