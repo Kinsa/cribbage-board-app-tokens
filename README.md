@@ -26,7 +26,7 @@ To use these tokens in another project:
 
 ```bash
 # sh
-npm install @kinsa/cribbage-board-app-tokens
+npm install github:Kinsa/cribbage-board-app-tokens
 ```
 
 Then import the tokens in your project:
@@ -57,13 +57,14 @@ This project is licensed under the Apache License 2.0. By contributing, you agre
 To add or modify design tokens:
 
 1. Install the requisite version of Node.js using [Mise](https://mise.jdx.dev): `mise install`
-2. Install the project: `npm install`
-3. Edit the token definitions in `tokens/design-tokens.tokens.json`
-4. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
+2. Clone the project and create a new branch
+3. Install the project: `npm install`
+4. Edit the token definitions in `tokens/design-tokens.tokens.json`
+5. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
     a. Run tests with `npx mocha`
-5. Run `npm run build` to regenerate outputs
-6. Commit the token source
-7. Submit a pull request
+6. Run `npm run build` to regenerate outputs
+7. Commit the token source and build files
+8. Submit a pull request
 
 ## Publishing
 
