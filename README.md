@@ -15,7 +15,10 @@ After running `npm run build`, the following files are generated:
 
 - **CSS**: `build/css/_variables.css` - CSS custom properties for web applications
 - **JavaScript**: `build/js/variables.js` - ES6 module for JavaScript/TypeScript projects
-- **Tailwind**: `build/tailwind/colors.js` - Color tokens formatted for Tailwind CSS configuration
+- **Tailwind**: 
+    - `build/tailwind/cssVarsPlugin.js` - A [Tailwind plugin](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities) for registering new [base styles](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities). The rgbChannels transform removes the color space function for compatability with Tailwind's [opacity modifier syntax](https://tailwindcss.com/docs/color#changing-the-opacity).
+    - `build/tailwind/themeColors.js` - Tailwind theme color values that reference the plugin [css vars](https://tailwindcss.com/docs/colors#using-css-variables).
+    - `build/tailwind/preset.js` - [Tailwind preset file](https://v3.tailwindcss.com/docs/presets) that imports the colors and plugin.
 
 ## Installation as a Dependency
 
@@ -30,18 +33,18 @@ Then import the tokens in your project:
 
 ```
 // JavaScript
-import tokens from '@kinsa/cribbage-board-app-tokens';
+import {
+  LightSurfaceBoardTrack,
+  LightSurfacePlayer1,
+  LightSurfacePlayer2,
+} from '@kinsa/cribbage-board-app-tokens';
 
 // Tailwind (in your tailwind.config.js)
-const { colors } = require('@kinsa/cribbage-board-app-tokens/build/tailwind/variables.js');
-
 module.exports = {
-  theme: {
-    extend: {
-      colors,
-    },
-  },
-};
+  presets: [
+    require('@kinsa/cribbage-board-app-tokens/tailwind/preset'),
+  ],
+}
 
 /* CSS */
 @import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';
@@ -56,9 +59,11 @@ To add or modify design tokens:
 1. Install the requisite version of Node.js using [Mise](https://mise.jdx.dev): `mise install`
 2. Install the project: `npm install`
 3. Edit the token definitions in `tokens/design-tokens.tokens.json`
-4. Run `npm run build` to regenerate outputs
-5. Commit the token source
-6. Submit a pull request
+4. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
+    a. Run tests with `npx mocha`
+5. Run `npm run build` to regenerate outputs
+6. Commit the token source
+7. Submit a pull request
 
 ## Publishing
 
@@ -71,8 +76,10 @@ npm publish
 
 The `prepublishOnly` script will automatically build tokens before publishing.
 
-## License
+## Attribution and License
 
 Copyright 2025 Kinsa Creative Incorporated
 
-Licensed under the Apache License, Version 2.0
+This project includes configuration and code derived from [style-dictionary examples](https://github.com/style-dictionary/style-dictionary/tree/main/examples/advanced/tailwind-preset), which are licensed under the Apache License 2.0. Specifically, the configuration files in the `config/` directory and `config.js` are based on the Tailwind preset example from that repository.
+
+The modifications and original content in this project remain licensed under the [Apache License 2.0](LICENSE).

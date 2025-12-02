@@ -9,14 +9,26 @@
     "properties"
   ],
   "scripts": {
-    "build": "node_modules/.bin/style-dictionary build",
+    "build": "node_modules/.bin/style-dictionary build --config ./config.js",
     "clean": "rm -rf build",
     "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/js/variables.js"
+    },
+    "./build/js/variables": {
+      "import": "./build/js/variables.js"
+    },
+    "./build/tailwind/preset": "./build/tailwind/preset.js"
   },
   "author": "Kinsa Creative Incorporated",
   "license": "Apache-2.0",
   "devDependencies": {
-    "style-dictionary": "^5.1.1"
+    "chai": "^6.2.1",
+    "mocha": "^11.7.5",
+    "style-dictionary": "^5.1.1",
+    "tailwindcss": "^4.1.17"
   }
 }

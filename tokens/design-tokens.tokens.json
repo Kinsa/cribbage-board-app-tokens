@@ -14,12 +14,12 @@
       "inverted primary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.100}"
+        "$value": "{primitives.color.grey.50}"
       },
       "canvas": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.150}"
+        "$value": "{primitives.color.grey.100}"
       },
       "secondary": {
         "$description": "",
@@ -30,6 +30,11 @@
         "$description": "",
         "$type": "color",
         "$value": "{primitives.color.grey.900}"
+      },
+      "board track": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.200}"
       }
     },
     "text": {
@@ -80,7 +85,7 @@
       "inverted primary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.100}"
+        "$value": "{primitives.color.grey.50}"
       }
     },
     "button": {
@@ -93,7 +98,7 @@
         "text": {
           "$description": "",
           "$type": "color",
-          "$value": "{primitives.color.grey.100}"
+          "$value": "{primitives.color.grey.50}"
         },
         "background": {
           "$description": "",
@@ -110,7 +115,7 @@
         "text": {
           "$description": "",
           "$type": "color",
-          "$value": "{primitives.color.grey.100}"
+          "$value": "{primitives.color.grey.50}"
         },
         "background": {
           "$description": "",
@@ -145,12 +150,17 @@
       "secondary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.150}"
+        "$value": "{primitives.color.grey.100}"
       },
       "primary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.100}"
+        "$value": "{primitives.color.grey.50}"
+      },
+      "board track": {
+        "$description": "",
+        "$type": "color",
+        "$value": "{primitives.color.grey.200}"
       }
     },
     "text": {
@@ -191,12 +201,12 @@
       "secondary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.150}"
+        "$value": "{primitives.color.grey.100}"
       },
       "primary": {
         "$description": "",
         "$type": "color",
-        "$value": "{primitives.color.grey.100}"
+        "$value": "{primitives.color.grey.50}"
       },
       "inverted primary": {
         "$description": "",
@@ -214,7 +224,7 @@
         "text": {
           "$description": "",
           "$type": "color",
-          "$value": "{primitives.color.grey.100}"
+          "$value": "{primitives.color.grey.50}"
         },
         "background": {
           "$description": "",
@@ -231,7 +241,7 @@
         "text": {
           "$description": "",
           "$type": "color",
-          "$value": "{primitives.color.grey.100}"
+          "$value": "{primitives.color.grey.50}"
         },
         "background": {
           "$description": "",

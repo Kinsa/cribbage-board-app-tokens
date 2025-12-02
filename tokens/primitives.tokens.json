@@ -42,11 +42,11 @@
                 }
             },
             "grey": {
-                "100": {
+                "50": {
                     "$type": "color",
                     "$value": "#faf8f8ff"
                 },
-                "150": {
+                "100": {
                     "$type": "color",
                     "$value": "#f3f4f6ff"
                 },
