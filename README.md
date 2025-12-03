@@ -41,8 +41,9 @@ import {
 
 // Tailwind (in your tailwind.config.js)
 module.exports = {
+  // content: ['./index.html'], etc. ...
   presets: [
-    require('@kinsa/cribbage-board-app-tokens/tailwind/preset'),
+    require('@kinsa/cribbage-board-app-tokens/build/tailwind/preset').default,
   ],
 }
 
