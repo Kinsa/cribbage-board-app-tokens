@@ -15,7 +15,10 @@ After running `npm run build`, the following files are generated:
 
 - **ES Module**: `build/es/variables.mjs` - ES6 module for JavaScript/TypeScript projects
 - **CSS**: `build/css/_variables.css` - CSS custom properties for web applications
-- **JavaScript**: `build/js/variables.js` - CSS properties as JavaScript variables for JavaScript/TypeScript projects
+
+### Deprecated
+
+- **JavaScript**: `build/js/variables.js` - CSS properties as JavaScript variables in an ES6 module for JavaScript/TypeScript projects
 - **Tailwind v3**:
   - `build/tailwind/cssVarsPlugin.js` - A [Tailwind plugin](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities) for registering new [base styles](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities). The rgbChannels transform removes the color space function for compatability with Tailwind's [opacity modifier syntax](https://tailwindcss.com/docs/color#changing-the-opacity).
   - `build/tailwind/themeColors.js` - Tailwind theme color values that reference the plugin [css vars](https://tailwindcss.com/docs/colors#using-css-variables).
