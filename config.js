@@ -41,7 +41,8 @@ export default {
             files: [
                 {
                     destination: '_variables.css',
-                    format: 'css/variables'
+                    format: 'css/variables',
+					filter: (token) => token.path[0] !== 'primitives',
                 }
             ]
         },
@@ -51,7 +52,8 @@ export default {
             files: [
                 {
                     destination: 'variables.js',
-                    format: 'javascript/es6'
+                    format: 'javascript/es6',
+					filter: (token) => token.path[0] !== 'primitives',
                 }
             ]
         },
@@ -62,10 +64,12 @@ export default {
 				{
 					destination: 'cssVarsPlugin.js',
 					format: 'tailwind/css-vars-plugin',
+					filter: (token) => token.path[0] !== 'primitives',
 				},
 				{
 					destination: 'themeColors.js',
 					format: 'tailwind/theme-colors',
+					filter: (token) => token.path[0] !== 'primitives',
 				},
 				{
 					destination: 'preset.js',
