@@ -7,7 +7,7 @@ tokens/
 ├── design-tokens.tokens.json # Main design token definitions
 ```
 
-This repository uses [Style Dictionary](https://amzn.github.io/style-dictionary) to transform design tokens into multiple output formats (CSS variables, JavaScript exports).
+This repository uses [Style Dictionary](https://styledictionary.com) to transform design tokens into multiple output formats (CSS variables, JavaScript exports).
 
 ## Token Output Formats
 
@@ -65,18 +65,17 @@ To add or modify design tokens:
     a. Run tests with `npx mocha`
 6. Run `npm run build` to regenerate outputs
 7. Commit the token source and build files
-8. Submit a pull request
+8. Submit a pull request to the `develop` branch
 
 ## Publishing
 
-To publish a new version to npm:
-
-```bash
-npm version patch    # or minor, major
-npm publish
-```
-
-The `prepublishOnly` script will automatically build tokens before publishing.
+1. Create a release branch
+2. Bump the version number in `package.json`
+3. Test
+4. Build
+5. Make a PR onto `main`
+6. Merge the PR 
+7. Create a tag with the same version number as set in step 2
 
 ## Attribution and License
 
