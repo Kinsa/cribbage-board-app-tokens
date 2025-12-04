@@ -13,9 +13,9 @@ This repository uses [Style Dictionary](https://styledictionary.com) to transfor
 
 After running `npm run build`, the following files are generated:
 
+- **ES Module**: `build/es/variables.mjs` - ES6 module for JavaScript/TypeScript projects
 - **CSS**: `build/css/_variables.css` - CSS custom properties for web applications
 - **JavaScript**: `build/js/variables.js` - CSS properties as JavaScript variables for JavaScript/TypeScript projects
-- **esModule**: `build/esModule/variables.mjs` - ES6 module for JavaScript/TypeScript projects
 - **Tailwind v3**:
   - `build/tailwind/cssVarsPlugin.js` - A [Tailwind plugin](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities) for registering new [base styles](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities). The rgbChannels transform removes the color space function for compatability with Tailwind's [opacity modifier syntax](https://tailwindcss.com/docs/color#changing-the-opacity).
   - `build/tailwind/themeColors.js` - Tailwind theme color values that reference the plugin [css vars](https://tailwindcss.com/docs/colors#using-css-variables).
@@ -61,8 +61,8 @@ This project is licensed under the Apache License 2.0. By contributing, you agre
 
 To add or modify design tokens:
 
-1. Install the requisite version of Node.js using [Mise](https://mise.jdx.dev): `mise install`
-2. Clone the project and create a new branch
+1. Clone the project and create a new branch
+2. Install the requisite version of Node.js using [Mise](https://mise.jdx.dev): `mise install`
 3. Install the project: `npm install`
 4. Edit the token definitions in `tokens/design-tokens.tokens.json`
 5. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
