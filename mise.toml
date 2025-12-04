@@ -5,6 +5,10 @@ node = "lts"
 run = "node_modules/.bin/style-dictionary build"
 description = "Build styles"
 
+[tasks.test]
+run = "npm run test"
+description = "Run tests with Mocha"
+
 [tasks.lint]
 run = "npm run lint"
 description = "Find code quality issues with ESLint"
