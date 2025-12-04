@@ -158,8 +158,8 @@ To add or modify design tokens:
 6. Lint and fix code `mise run lint`
 7. Format code according to the prettier rules `mise run format`
 8. Run `npm run build` to regenerate outputs
-9. Commit the token source and build files - linting will be ran and files formatted using prettier before you can commit
-10. Push and submit a pull request to the `develop` branch - tests will be run before you can push
+9. Commit the token source and build files - linting will be ran and files formatted using prettier before you can commit; run `mise run lint-fix` as necessary
+10. Push and submit a pull request to the `develop` branch - tests will be run before you can push; resolve any issues and re-run `mise run test` until things pass
 
 ## Publishing
 
