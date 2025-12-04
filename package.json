@@ -13,6 +13,10 @@
     "clean": "rm -rf build",
     "prepublishOnly": "npm run build",
     "test": "npx mocha",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "husky"
   },
   "exports": {

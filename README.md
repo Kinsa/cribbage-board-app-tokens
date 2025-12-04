@@ -67,9 +67,11 @@ To add or modify design tokens:
 4. Edit the token definitions in `tokens/design-tokens.tokens.json`
 5. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
    a. Run tests with `npx mocha`
-6. Run `npm run build` to regenerate outputs
-7. Commit the token source and build files
-8. Submit a pull request to the `develop` branch
+6. Lint and fix code `mise run lint`
+7. Format code according to the prettier rules `mise run format`
+8. Run `npm run build` to regenerate outputs
+9. Commit the token source and build files
+10. Submit a pull request to the `develop` branch
 
 ## Publishing
 

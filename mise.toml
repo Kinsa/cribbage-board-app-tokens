@@ -4,3 +4,15 @@ node = "lts"
 [tasks.build]
 run = "node_modules/.bin/style-dictionary build"
 description = "Build styles"
+
+[tasks.lint]
+run = "npm run lint"
+description = "Find code quality issues with ESLint"
+
+[tasks.lint-fix]
+run = "npm run lint:fix"
+description = "Fix code quality issues with ESLint and format with prettier"
+
+[tasks.prettier]
+run = "npm run format"
+description = "Format code with prettier"
