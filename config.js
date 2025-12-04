@@ -57,6 +57,17 @@ export default {
                 }
             ]
         },
+		esModule: {
+			transformGroup: 'js',
+			buildPath: 'build/es/',
+			files: [
+				{
+					destination: 'variables.mjs',
+					format: 'javascript/es6',
+					filter: (token) => token.path[0] !== 'primitives',
+				}
+			]
+		},	
 		tailwindPreset: {
 			buildPath: 'build/tailwind/',
 			transformGroup: 'tailwind',
