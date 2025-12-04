@@ -5,14 +5,14 @@ import { isColor } from './filter.js';
  * @see https://tailwindcss.com/docs/plugins#overview
  */
 export function cssVarsPlugin({ dictionary }) {
-	const vars = dictionary.allTokens
-		.map((token) => {
-			const value = token?.$value || token?.value;
-			return `'--${token.name}': '${value}'`;
-		})
-		.join(',\n\t\t\t');
+  const vars = dictionary.allTokens
+    .map(token => {
+      const value = token?.$value || token?.value;
+      return `'--${token.name}': '${value}'`;
+    })
+    .join(',\n\t\t\t');
 
-	return `import plugin from 'tailwindcss/plugin.js';
+  return `import plugin from 'tailwindcss/plugin.js';
 
 export default plugin(function ({ addBase }) {
 \taddBase({
@@ -28,15 +28,15 @@ export default plugin(function ({ addBase }) {
  * @see https://tailwindcss.com/docs/customizing-colors#using-css-variables
  */
 export function themeColors({ dictionary, options }) {
-	const tokens = dictionary.allTokens.filter((token) => isColor(token, options));
+  const tokens = dictionary.allTokens.filter(token => isColor(token, options));
 
-	const theme = tokens
-		.map((token) => {
-			return `\t'${token.name}': 'rgb(var(--${token.name}))'`;
-		})
-		.join(',\n');
+  const theme = tokens
+    .map(token => {
+      return `\t'${token.name}': 'rgb(var(--${token.name}))'`;
+    })
+    .join(',\n');
 
-	return `export default {\n${theme},\n};\n`;
+  return `export default {\n${theme},\n};\n`;
 }
 
 /**
@@ -44,7 +44,7 @@ export function themeColors({ dictionary, options }) {
  * @see https://tailwindcss.com/docs/presets
  */
 export function preset() {
-	return `import themeColors from './themeColors.js';
+  return `import themeColors from './themeColors.js';
 import cssVarsPlugin from './cssVarsPlugin.js';
 
 export default {

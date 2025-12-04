@@ -3,10 +3,10 @@ import { describe, it } from 'mocha';
 import { isColor } from '../config/filter.js';
 
 describe('isColor', () => {
-	it('should handle legacy and dtcg formats', () => {
-		expect(isColor({ type: 'color' })).to.equal(true);
-		expect(isColor({ $type: 'color' })).to.equal(true);
-		expect(isColor({ type: 'fontSize' })).to.equal(false);
-		expect(isColor({ $type: 'fontSize' })).to.equal(false);
-	});
+  it('should handle legacy and dtcg formats', () => {
+    expect(isColor({ type: 'color' })).to.equal(true);
+    expect(isColor({ $type: 'color' })).to.equal(true);
+    expect(isColor({ type: 'fontSize' })).to.equal(false);
+    expect(isColor({ $type: 'fontSize' })).to.equal(false);
+  });
 });

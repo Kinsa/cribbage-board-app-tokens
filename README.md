@@ -3,7 +3,7 @@ Design token source repository for [Cribbage Board App](https://github.com/Kinsa
 ## Project Structure
 
 ```bash
-tokens/ 
+tokens/
 ├── design-tokens.tokens.json # Main design token definitions
 ```
 
@@ -14,11 +14,12 @@ This repository uses [Style Dictionary](https://styledictionary.com) to transfor
 After running `npm run build`, the following files are generated:
 
 - **CSS**: `build/css/_variables.css` - CSS custom properties for web applications
-- **JavaScript**: `build/js/variables.js` - ES6 module for JavaScript/TypeScript projects
-- **Tailwind v3**: 
-    - `build/tailwind/cssVarsPlugin.js` - A [Tailwind plugin](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities) for registering new [base styles](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities). The rgbChannels transform removes the color space function for compatability with Tailwind's [opacity modifier syntax](https://tailwindcss.com/docs/color#changing-the-opacity).
-    - `build/tailwind/themeColors.js` - Tailwind theme color values that reference the plugin [css vars](https://tailwindcss.com/docs/colors#using-css-variables).
-    - `build/tailwind/preset.js` - [Tailwind preset file](https://v3.tailwindcss.com/docs/presets) that imports the colors and plugin.
+- **JavaScript**: `build/js/variables.js` - CSS properties as JavaScript variables for JavaScript/TypeScript projects
+- **esModule**: `build/esModule/variables.mjs` - ES6 module for JavaScript/TypeScript projects
+- **Tailwind v3**:
+  - `build/tailwind/cssVarsPlugin.js` - A [Tailwind plugin](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities) for registering new [base styles](https://tailwindcss.com/docs/adding-custom-styles#functional-utilities). The rgbChannels transform removes the color space function for compatability with Tailwind's [opacity modifier syntax](https://tailwindcss.com/docs/color#changing-the-opacity).
+  - `build/tailwind/themeColors.js` - Tailwind theme color values that reference the plugin [css vars](https://tailwindcss.com/docs/colors#using-css-variables).
+  - `build/tailwind/preset.js` - [Tailwind preset file](https://v3.tailwindcss.com/docs/presets) that imports the colors and plugin.
 
 ## Installation as a Dependency
 
@@ -32,12 +33,18 @@ npm install github:Kinsa/cribbage-board-app-tokens
 Then import the tokens in your project:
 
 ```
+// ES Module
+import variables from '@kinsa/cribbage-board-app-tokens';
+
+/* CSS */
+@import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';
+
 // JavaScript
 import {
   LightSurfaceBoardTrack,
   LightSurfacePlayer1,
   LightSurfacePlayer2,
-} from '@kinsa/cribbage-board-app-tokens';
+} from '@kinsa/cribbage-board-app-tokens/build/js/variables';
 
 // Tailwind (in your tailwind.config.js)
 module.exports = {
@@ -46,9 +53,6 @@ module.exports = {
     require('@kinsa/cribbage-board-app-tokens/build/tailwind/preset').default,
   ],
 }
-
-/* CSS */
-@import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';
 ```
 
 ## Contributing
@@ -62,7 +66,7 @@ To add or modify design tokens:
 3. Install the project: `npm install`
 4. Edit the token definitions in `tokens/design-tokens.tokens.json`
 5. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
-    a. Run tests with `npx mocha`
+   a. Run tests with `npx mocha`
 6. Run `npm run build` to regenerate outputs
 7. Commit the token source and build files
 8. Submit a pull request to the `develop` branch
@@ -74,7 +78,7 @@ To add or modify design tokens:
 3. Test
 4. Build
 5. Make a PR onto `main`
-6. Merge the PR 
+6. Merge the PR
 7. Create a tag with the same version number as set in step 2
 
 ## Attribution and License
