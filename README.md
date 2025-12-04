@@ -36,8 +36,6 @@ Then import the tokens in your project:
 // ES Module
 import variables from '@kinsa/cribbage-board-app-tokens';
 
-
-
 /* CSS */
 @import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';
 
@@ -57,11 +55,61 @@ module.exports = {
 }
 ```
 
-To update (this will update the local code to match the code in the repository):
+### Updating When Changes Are Merged Onto Main
+
+To update the local code to match the code in the repository:
 
 ```bash
 # sh
 npm update @kinsa/cribbage-board-app-tokens
+```
+
+### Configuring Jest to Import Design Tokens
+
+If a Jest test needs to import the ES Module or JavaScript version of the tokens, some adjustments need to be made to the Jest configuration.
+
+- The design tokens package uses ES module syntax (export default) in its built files
+- Jest runs in Node.js and expects CommonJS modules by default
+- [babel-jest](https://jestjs.io/docs/getting-started#using-babel) transpiles ES module syntax to CommonJS so Jest can parse it
+- The `transformIgnorePatterns` entry tells Jest not to skip transformation for `@kinsa/*` packages
+
+_The following directions specifically address the ES Module variation. To use the JavaScript variation, modify the path in step 1 to end in `js/variables.js` instead of `es/variables.mjs` and skip step 2._
+
+Edit the `"jest"` entry in the `package.json` file
+
+1. **Add module name mapping** - Map the scoped package import to the ES module build:
+
+```json
+"jest": {
+  ...
+  "moduleNameMapper": {
+    "^@kinsa/cribbage-board-app-tokens$": "<rootDir>/node_modules/@kinsa/cribbage-board-app-tokens/build/es/variables.mjs"
+  }
+}
+```
+
+2. Add babel-jest transform for .mjs files - Configure Jest to transpile ES modules:
+
+```json
+"jest": {
+  ...
+  "transform": {
+    "^.+\\.mjs$": "babel-jest"
+  }
+}
+```
+
+3. Include @kinsa in transformIgnorePatterns - Ensure the package is processed by transformers:
+
+Add `|@kinsa/.*` to an existing transformIgnorePatterns pattern:
+
+```json
+"jest": {
+  ...
+  "transformIgnorePatterns": [
+    "node_modules/(?!(other-modules|@kinsa/.*)/)"
+  ]
+}
 ```
 
 ## Use
@@ -72,7 +120,7 @@ Tokens are prefixed with either `light` or `dark`. Any token that exists in one 
 
 ### Formatting conventions
 
-In Figma tokens can use spaces e.g. `inverted primary` or `player 1` as well as hyphens e.g. `high-contrast`.
+In Figma tokens can use spaces, e.g. `inverted primary` or `player 1` as well as hyphens, e.g. `high-contrast`.
 
 #### CSS & Tailwind
 
@@ -101,9 +149,9 @@ To add or modify design tokens:
 1. Clone the project and create a new branch
 2. Install the requisite version of Node.js using [Mise](https://mise.jdx.dev): `mise install`
 3. Install the project: `npm install`
-4. Edit the token definitions in `tokens/design-tokens.tokens.json`
+4. Edit the token definitions in `tokens/`
 5. Create any unit tests for functionality using Mocha and Chai in the `test/` directory
-   a. Run tests with `npx mocha`, `npm run test`, or `mise run test` (they all run the same thing)
+   - Run tests with `npx mocha`, `npm run test`, or `mise run test` (they all run the same thing)
 6. Lint and fix code `mise run lint`
 7. Format code according to the prettier rules `mise run format`
 8. Run `npm run build` to regenerate outputs
