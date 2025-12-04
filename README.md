@@ -64,6 +64,34 @@ To update (this will update the local code to match the code in the repository):
 npm update @kinsa/cribbage-board-app-tokens
 ```
 
+## Use
+
+### Light and Dark Themes
+
+Tokens are prefixed with either `light` or `dark`. Any token that exists in one must exist in the other. This is certified by the `tokens.test.js` test which checks for the existence of each token from one set to the other and the same number of tokens in each set.
+
+### Formatting conventions
+
+In Figma tokens can use spaces e.g. `inverted primary` or `player 1` as well as hyphens e.g. `high-contrast`.
+
+#### CSS & Tailwind
+
+Spaces are automatically converted to hyphens when creating the CSS vars so that `inverted primary` becomes `inverted-primary`. `high-contrast` remains `high-contrast` in the CSS.
+
+When applying color variables in Tailwind, specify if the color should be applied to text or background colors using the `text-` and `bg-` Tailwind prefixes respectively before the variable name. So something that should be set in the primary color in light mode would get the class name `text-light-text-primary`.
+
+#### ES Module
+
+Spaces and hyphens are converted to camel case when building the ES Module so `inverted primary` and `high-contrast` become `invertedPrimary` and `highContrast` respectively.
+
+#### JavaScript
+
+Spaces and hyphens are converted to Pascal case when building the JS variables so `inverted primary` and `high-contrast` become `InvertedPrimary` and `HighContrast` respectively.
+
+### Player 1 and Player 2 Variations
+
+The Player 1 and Player 2 component categories (`button`, `text`, `surface`) must have a complete set of the same token names. This is certified by the `tokens.test.js` test which checks the existence of tokens in each theme from player 1 to player 2 and that they have the same number of tokens in each set.
+
 ## Contributing
 
 This project is licensed under the Apache License 2.0. By contributing, you agree that your contributions will be licensed under the same license. See [LICENSE](LICENSE) for details.
