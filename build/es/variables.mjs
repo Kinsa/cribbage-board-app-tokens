@@ -31,7 +31,7 @@ export default {
         background: "#4c9d00"
       },
       player2: {
-        focus: "#0059b2",
+        backgroundFocus: "#0059b2",
         text: "#faf8f8",
         background: "#0073e6"
       }

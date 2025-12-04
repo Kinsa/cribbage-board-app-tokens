@@ -18,7 +18,7 @@ export default {
 	'light-button-player-1-background-focus': 'rgb(var(--light-button-player-1-background-focus))',
 	'light-button-player-1-text': 'rgb(var(--light-button-player-1-text))',
 	'light-button-player-1-background': 'rgb(var(--light-button-player-1-background))',
-	'light-button-player-2-focus': 'rgb(var(--light-button-player-2-focus))',
+	'light-button-player-2-background-focus': 'rgb(var(--light-button-player-2-background-focus))',
 	'light-button-player-2-text': 'rgb(var(--light-button-player-2-text))',
 	'light-button-player-2-background': 'rgb(var(--light-button-player-2-background))',
 	'dark-surface-player-1': 'rgb(var(--dark-surface-player-1))',

@@ -22,7 +22,7 @@ export default plugin(function ({ addBase }) {
 			'--light-button-player-1-background-focus': '49 102 0',
 			'--light-button-player-1-text': '250 248 248',
 			'--light-button-player-1-background': '76 157 0',
-			'--light-button-player-2-focus': '0 89 178',
+			'--light-button-player-2-background-focus': '0 89 178',
 			'--light-button-player-2-text': '250 248 248',
 			'--light-button-player-2-background': '0 115 230',
 			'--dark-surface-player-1': '137 206 0',
