@@ -23,7 +23,7 @@ After running `npm run build`, the following files are generated:
 
 ## Installation as a Dependency
 
-To use these tokens in another project:
+To use these tokens in another project by installing from the main branch:
 
 ```bash
 # sh
@@ -35,6 +35,8 @@ Then import the tokens in your project:
 ```
 // ES Module
 import variables from '@kinsa/cribbage-board-app-tokens';
+
+
 
 /* CSS */
 @import '@kinsa/cribbage-board-app-tokens/build/css/_variables.css';
@@ -53,6 +55,13 @@ module.exports = {
     require('@kinsa/cribbage-board-app-tokens/build/tailwind/preset').default,
   ],
 }
+```
+
+To update (this will update the local code to match the code in the repository):
+
+```bash
+# sh
+npm update @kinsa/cribbage-board-app-tokens
 ```
 
 ## Contributing

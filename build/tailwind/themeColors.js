@@ -40,7 +40,7 @@ export default {
 	'dark-button-player-1-background-focus': 'rgb(var(--dark-button-player-1-background-focus))',
 	'dark-button-player-1-text': 'rgb(var(--dark-button-player-1-text))',
 	'dark-button-player-1-background': 'rgb(var(--dark-button-player-1-background))',
-	'dark-button-player-2-focus': 'rgb(var(--dark-button-player-2-focus))',
+	'dark-button-player-2-background-focus': 'rgb(var(--dark-button-player-2-background-focus))',
 	'dark-button-player-2-text': 'rgb(var(--dark-button-player-2-text))',
 	'dark-button-player-2-background': 'rgb(var(--dark-button-player-2-background))',
 };

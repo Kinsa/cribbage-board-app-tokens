@@ -43,6 +43,6 @@ export const DarkTextInvertedPrimary = "#1a1a1a";
 export const DarkButtonPlayer1BackgroundFocus = "#4c9d00";
 export const DarkButtonPlayer1Text = "#faf8f8";
 export const DarkButtonPlayer1Background = "#89ce00";
-export const DarkButtonPlayer2Focus = "#3587d8";
+export const DarkButtonPlayer2BackgroundFocus = "#3587d8";
 export const DarkButtonPlayer2Text = "#faf8f8";
 export const DarkButtonPlayer2Background = "#66b9e5";

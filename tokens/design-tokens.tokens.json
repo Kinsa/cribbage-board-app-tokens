@@ -233,7 +233,7 @@
         }
       },
       "player 2": {
-        "focus": {
+        "background focus": {
           "$description": "",
           "$type": "color",
           "$value": "{primitives.color.blue.300}"

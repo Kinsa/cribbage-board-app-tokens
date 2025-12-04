@@ -44,7 +44,7 @@ export default plugin(function ({ addBase }) {
 			'--dark-button-player-1-background-focus': '76 157 0',
 			'--dark-button-player-1-text': '250 248 248',
 			'--dark-button-player-1-background': '137 206 0',
-			'--dark-button-player-2-focus': '53 135 216',
+			'--dark-button-player-2-background-focus': '53 135 216',
 			'--dark-button-player-2-text': '250 248 248',
 			'--dark-button-player-2-background': '102 185 229',
 		},
